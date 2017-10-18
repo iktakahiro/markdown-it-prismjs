@@ -1,0 +1,8 @@
+src/
+test/
+coverage/
+.*
+*.log
+tsconfig.json
+tsling.json
+.travis.yml
