@@ -1,6 +1,6 @@
 import path = require("path")
 import generate = require("markdown-it-testgen")
-import { markdownItPrism } from "../src/index"
+import markdownItPrism from "../src/index"
 import MarkdownIt = require("markdown-it")
 
 describe("markdown-it-br", () => {

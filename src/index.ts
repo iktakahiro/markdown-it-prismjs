@@ -41,7 +41,7 @@ export interface MarkdownItPrismJsPluginOptions {
     init?: (prism: any) => void
 }
 
-export function markdownItPrism(md: MarkdownIt, options: MarkdownItPrismJsPluginOptions = { plugins: [] }) {
+export default function markdownItPrismjs(md: MarkdownIt, options: MarkdownItPrismJsPluginOptions = { plugins: [] }) {
 
     options.plugins.forEach(loadPrismPlugin)
     if (options["init"] !== undefined) {
