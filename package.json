@@ -1,0 +1,49 @@
+{
+    "name": "@iktakahiro/markdown-it-prismjs",
+    "version": "0.9.0",
+    "description": "Prism plugin for markdown-it.",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "keywords": [
+        "markdown-it-plugin",
+        "markdown-it",
+        "markdown",
+        "syntax-highlight",
+        "text"
+    ],
+    "scripts": {
+        "predist": "npm run test",
+        "prepublish": "tsc",
+        "test": "mocha -r ts-node/register ./test/test.ts",
+        "coverage": "rm -rf coverage && istanbul cover node_modules/.bin/_mocha",
+        "test-ci": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage"
+    },
+    "homepage": "https://github.com/iktakahiro/markdown-it-prismjs",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/iktakahiro/markdown-it-prismjs.git"
+    },
+    "bugs": {
+        "url": "https://github.com/iktakahiro/markdown-it-prismjs/issues"
+    },
+    "author": "Takahiro Ikeuchi",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/markdown-it": "0.0.4",
+        "@types/mocha": "^2.2.43",
+        "@types/node": "^8.0.34",
+        "@types/prismjs": "^1.6.4",
+        "coveralls": "^2.11.2",
+        "markdown-it": "^8.4.0",
+        "markdown-it-testgen": "~0.1.0",
+        "mocha": "*",
+        "ts-node": "^3.3.0",
+        "typescript": "^2.5.3"
+    },
+    "dependencies": {
+        "prismjs": "^1.8.1"
+    },
+    "directories": {
+        "test": "test"
+    }
+}
