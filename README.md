@@ -4,9 +4,10 @@
 # markdown-it-prismjs
 
 ## Usage
-```js
-const md = require('markdown-it')();
-const prismPlugin = require('@iktakahiro/markdown-it-prismjs');
+```typescript
+import MarkdownIt = require("markdown-it")
+import markdownItPrism from "@iktakahiro/markdown-it-prismjs"
 
-md.use(prismPlugin);
+const md = MarkdownIt()
+md.use(markdownItPrism)
 ```

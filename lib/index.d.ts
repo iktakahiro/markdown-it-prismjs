@@ -4,4 +4,4 @@ export interface MarkdownItPrismJsPluginOptions {
     plugins?: string[];
     init?: (prism: any) => void;
 }
-export declare function markdownItPrism(md: MarkdownIt, options?: MarkdownItPrismJsPluginOptions): void;
+export default function markdownItPrismjs(md: MarkdownIt, options?: MarkdownItPrismJsPluginOptions): void;
