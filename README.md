@@ -3,6 +3,12 @@
 
 # markdown-it-prismjs
 
+## Install
+
+```bash
+npm install @iktakahiro/markdown-it-prismjs --save
+```
+
 ## Usage
 ```typescript
 import MarkdownIt = require("markdown-it")
