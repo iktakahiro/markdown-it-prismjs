@@ -13,11 +13,16 @@
     ],
     "scripts": {
         "predist": "npm run test",
-        "prepublish": "tsc",
+        "prepare": "tsc",
         "test": "mocha -r ts-node/register ./test/test.ts",
         "coverage": "rm -rf coverage && istanbul cover node_modules/.bin/_mocha",
-        "test-ci": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage"
+        "test-ci": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage",
+        "precommit": "tsc && git add ./lib/*"
     },
+    "pre-commit": [
+        "test",
+        "precommit"
+    ],
     "homepage": "https://github.com/iktakahiro/markdown-it-prismjs",
     "repository": {
         "type": "git",
@@ -37,6 +42,7 @@
         "markdown-it": "^8.4.0",
         "markdown-it-testgen": "~0.1.0",
         "mocha": "*",
+        "pre-commit": "^1.2.2",
         "ts-node": "^3.3.0",
         "typescript": "^2.5.3"
     },
