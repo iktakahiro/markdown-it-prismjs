@@ -39,7 +39,7 @@
         "@types/node": "^8.0.34",
         "@types/prismjs": "^1.6.4",
         "coveralls": "^2.11.2",
-        "markdown-it": "^8.4.0",
+        "markdown-it": "^9.1.0",
         "markdown-it-testgen": "~0.1.0",
         "mocha": "*",
         "pre-commit": "^1.2.2",
