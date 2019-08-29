@@ -34,7 +34,7 @@
     "author": "Takahiro Ikeuchi",
     "license": "MIT",
     "devDependencies": {
-        "@types/markdown-it": "0.0.4",
+        "@types/markdown-it": "0.0.8",
         "@types/mocha": "^2.2.43",
         "@types/node": "^8.0.34",
         "@types/prismjs": "^1.6.4",
